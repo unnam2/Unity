@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28C62E4E-C711-4CBC-B012-1BDE3BFE7194}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Engine</RootNamespace>
+    <AssemblyName>Engine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Unity2017.2.0f3\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Unity2017.2.0f3\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Script\AI\AIDefault.cs" />
+    <Compile Include="Script\Data\Data.cs" />
+    <Compile Include="Script\Data\GameLevelData.cs" />
+    <Compile Include="Script\Data\GlobalData.cs" />
+    <Compile Include="Script\Data\Team.cs" />
+    <Compile Include="Script\Network\Core\Client.cs" />
+    <Compile Include="Script\Network\Core\Packet.cs" />
+    <Compile Include="Script\Network\Core\PacketManager.cs" />
+    <Compile Include="Script\Network\Core\PacketProcess.cs" />
+    <Compile Include="Script\Network\Sync\InputSync.cs" />
+    <Compile Include="Script\Network\Sync\TransformSync.cs" />
+    <Compile Include="Script\Pooling\Character\Character.cs" />
+    <Compile Include="Script\Pooling\Character\NavMeshManage.cs" />
+    <Compile Include="Script\Pooling\Control.cs" />
+    <Compile Include="Script\Pooling\Character\Monster.cs" />
+    <Compile Include="Script\Pooling\Character\Player.cs" />
+    <Compile Include="Script\Pooling\Core\Pooling.cs" />
+    <Compile Include="Script\Pooling\Core\PoolingList.cs" />
+    <Compile Include="Script\Pooling\Core\PoolingManage.cs" />
+    <Compile Include="Script\Pooling\Effect\Effect.cs" />
+    <Compile Include="Script\Pooling\Item\Core\Item.cs" />
+    <Compile Include="Script\Pooling\Item\Core\ItemManage.cs" />
+    <Compile Include="Script\Pooling\Item\Head\Head.cs" />
+    <Compile Include="Script\Pooling\Projectile\ProjectileAction.cs" />
+    <Compile Include="Script\Pooling\Projectile\ProjectileMove.cs" />
+    <Compile Include="Script\Pooling\Projectile\Projectile.cs" />
+    <Compile Include="Script\Pooling\Skill\Active\Primary\Bolas\NodeBolas.cs" />
+    <Compile Include="Script\Pooling\Skill\Active\Primary\EntanglingShot\NodeEntanglingShot.cs" />
+    <Compile Include="Script\Pooling\Skill\Active\Primary\EvasiveFire\NodeEvasiveFire.cs" />
+    <Compile Include="Script\Pooling\Skill\Active\Primary\Grenade\NodeGrenade.cs" />
+    <Compile Include="Script\Pooling\Skill\Active\Primary\HungeringArrow\HungeringArrow.cs" />
+    <Compile Include="Script\Pooling\Skill\Core\SkillActive.cs" />
+    <Compile Include="Script\Pooling\Skill\Core\SkillManage.cs" />
+    <Compile Include="Script\Pooling\Skill\Core\SkillPassive.cs" />
+    <Compile Include="Script\Pooling\Skill\Passive\ThrilloftheHunt.cs" />
+    <Compile Include="Script\Scene\GameManager.cs" />
+    <Compile Include="Script\Scene\InGame.cs" />
+    <Compile Include="Script\Scene\Title.cs" />
+    <Compile Include="Script\UI\Core\UIHud.cs" />
+    <Compile Include="Script\UI\Core\UIWorld.cs" />
+    <Compile Include="Script\UI\Hud\UIFade.cs" />
+    <Compile Include="Script\UI\Hud\UIHI.cs" />
+    <Compile Include="Script\UI\Hud\UILoading.cs" />
+    <Compile Include="Script\UI\Hud\UIPing.cs" />
+    <Compile Include="Script\UI\Hud\UIStart.cs" />
+    <Compile Include="Script\UI\Hud\UIStatus.cs" />
+    <Compile Include="Script\UI\Hud\UIText.cs" />
+    <Compile Include="Script\UI\World\UIDamage.cs" />
+    <Compile Include="Script\UI\World\UIEnemyHp.cs" />
+    <Compile Include="Script\Util\Util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y "$(TargetDir)Engine.dll" "C:\Unity\UnityProject\Assets\Plugins"</PostBuildEvent>
+  </PropertyGroup>
+</Project>
